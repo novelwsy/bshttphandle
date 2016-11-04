@@ -4,6 +4,7 @@
 from base64 import *
 
 import pyDes
+import hashlib
 from Crypto.Hash import SHA
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5 as Pk
@@ -38,3 +39,9 @@ def rsa_verify(pkcs8_public_key, data, signature):
     if signer.verify(digest, b64decode(signature)):
         return True
     return False
+
+
+def _md5(s):
+    m = hashlib.md5()
+    m.update(s)
+    return m.hexdigest()
