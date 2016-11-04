@@ -2,4 +2,4 @@
 # coding=utf-8
 __author__ = 'novelwsy'
 
-__all__ = ["hello"]
+__all__ = ["datacrypto"]
